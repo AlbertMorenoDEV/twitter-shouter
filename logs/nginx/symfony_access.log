@@ -1,0 +1,7 @@
+172.20.0.1 - - [20/May/2018:21:35:40 +0000] "GET / HTTP/1.1" 404 47 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:60.0) Gecko/20100101 Firefox/60.0"
+172.20.0.1 - - [20/May/2018:21:35:40 +0000] "GET /favicon.ico HTTP/1.1" 404 47 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:60.0) Gecko/20100101 Firefox/60.0"
+172.20.0.1 - - [20/May/2018:21:35:41 +0000] "GET /favicon.ico HTTP/1.1" 404 47 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:60.0) Gecko/20100101 Firefox/60.0"
+172.20.0.1 - - [20/May/2018:21:35:47 +0000] "GET /tweets/shouted?username=martinfowler&number=6 HTTP/1.1" 404 47 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:60.0) Gecko/20100101 Firefox/60.0"
+172.20.0.1 - - [20/May/2018:21:36:53 +0000] "GET /app_dev.php/tweets/shouted?username=martinfowler&number=6 HTTP/1.1" 404 47 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:60.0) Gecko/20100101 Firefox/60.0"
+172.20.0.1 - - [20/May/2018:21:36:56 +0000] "GET /app_dev.php HTTP/1.1" 404 47 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:60.0) Gecko/20100101 Firefox/60.0"
+172.20.0.1 - - [20/May/2018:21:37:00 +0000] "GET /app_dev.php/tweets/shouted?username=martinfowler&number=6 HTTP/1.1" 404 47 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:60.0) Gecko/20100101 Firefox/60.0"

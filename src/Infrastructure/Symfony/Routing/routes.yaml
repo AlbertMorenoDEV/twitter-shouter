@@ -1,0 +1,3 @@
+shout:
+    path: /tweets/shouted
+    controller: App\Infrastructure\Symfony\Controller\ShoutController::action

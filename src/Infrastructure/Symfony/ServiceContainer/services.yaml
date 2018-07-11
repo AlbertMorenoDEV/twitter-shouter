@@ -1,0 +1,38 @@
+parameters:
+    cache_time: 60 #seconds
+
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+    App\:
+        resource: '../../../../src/*'
+        exclude: '../../../../src/{Entity,Migrations,Tests,Kernel.php}'
+
+    App\Infrastructure\Symfony\Controller\:
+        resource: '../Controller'
+        tags: ['controller.service_arguments']
+
+    App\Infrastructure\DataSource\TwitterAPI\TwitterAPITweetRepository:
+        arguments:
+            $twitterAPIExchange: '@twitter_api_exchange'
+
+    App\Infrastructure\DataSource\CachedTweetRepository:
+        arguments:
+            $repository: '@App\Infrastructure\DataSource\TwitterAPI\TwitterAPITweetRepository'
+            $cacheTime: '%cache_time%'
+
+    App\Application\Tweet\ShoutLastTweetsUseCase:
+        arguments:
+            $repository: '@App\Infrastructure\DataSource\CachedTweetRepository'
+
+    twitter_api_exchange:
+        class: \TwitterAPIExchange
+        arguments:
+            $settings:
+                oauth_access_token: '%env(TWITTER_OAUTH_ACCESS_TOKEN)%'
+                oauth_access_token_secret: '%env(TWITTER_OAUTH_ACCESS_TOKEN_SECRET)%'
+                consumer_key: '%env(TWITTER_CONSUMER_KEY)%'
+                consumer_secret: '%env(TWITTER_CONSUMER_SECRET)%'
