@@ -38,8 +38,3 @@ Also I've used some design patterns:
 
 The first problem that I found was that I wasn't used to Symfony 4, I've working mostly in 2 and 3 but I wanted to give a try to the new version, so I struggled a bit to be ablet to have all the Symfony code in /src inside the Infrastructure folder.
 Also I found some problems declaring services in service.yaml, so I couldn't keep the main file like it was and having a new one inside Infrastructure with the specific declarations.
-
-
-## Time I've spent
-
-It has been around 12 hours, less that I wanted but I was out for three days as I said on the call.
